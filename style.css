@@ -1,0 +1,596 @@
+/* ==================================
+   HOPEHANDS NGO WEBSITE
+   ZELVORA WEEK 3 PROJECT
+================================== */
+
+/* General Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8fafc;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navigation Bar */
+
+.navbar {
+    background-color: #166534;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 26px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #bbf7d0;
+}
+
+/* Hero Section */
+
+.hero {
+    min-height: 450px;
+    background: linear-gradient(
+        rgba(20, 83, 45, 0.85),
+        rgba(22, 101, 52, 0.85)
+    ),
+    url("https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?w=1200");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: white;
+    padding: 70px 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    background-color: #22c55e;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #15803d;
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid white;
+}
+
+.btn-outline:hover {
+    background-color: white;
+    color: #166534;
+}
+
+/* About Section */
+
+.about {
+    padding: 70px 10%;
+    text-align: center;
+    background-color: white;
+}
+
+.about h2 {
+    font-size: 32px;
+    color: #166534;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 17px;
+    max-width: 850px;
+    margin: auto;
+    color: #555;
+}
+
+/* Our Causes Section */
+
+.causes {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.causes h2 {
+    font-size: 32px;
+    color: #166534;
+    margin-bottom: 40px;
+}
+
+.cause-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.cause-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+    padding-bottom: 25px;
+}
+
+.cause-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.cause-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.cause-card h3 {
+    color: #166534;
+    font-size: 21px;
+    margin: 20px 15px 10px;
+}
+
+.cause-card p {
+    color: #555;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.cause-card .btn {
+    margin-top: 10px;
+}
+
+/* Join Us Section */
+
+.join-section {
+    background: linear-gradient(135deg, #166534, #22c55e);
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.join-section h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.join-section p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.join-section .btn {
+    background-color: white;
+    color: #166534;
+    margin: 8px;
+}
+
+.join-section .btn:hover {
+    background-color: #dcfce7;
+}
+
+/* Footer */
+
+footer {
+    background-color: #14532d;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Tablet Responsive Design */
+
+@media (max-width: 900px) {
+
+    .cause-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h2 {
+        font-size: 34px;
+    }
+}
+
+/* Mobile Responsive Design */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 350px;
+        padding: 50px 20px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .cause-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about,
+    .causes {
+        padding: 50px 20px;
+    }
+
+    .about h2,
+    .causes h2,
+    .join-section h2 {
+        font-size: 26px;
+    }
+
+    .btn {
+        padding: 11px 20px;
+        font-size: 14px;
+    }
+}
+/* ==================================
+   CAMPAIGN SHOWCASE PAGE
+================================== */
+
+/* Campaign Heading */
+
+.campaign-heading {
+    background: linear-gradient(135deg, #166534, #22c55e);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.campaign-heading h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.campaign-heading p {
+    font-size: 18px;
+}
+
+/* Campaign Section */
+
+.campaign-section {
+    padding: 70px 8%;
+}
+
+.campaign-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Campaign Cards */
+
+.campaign-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.campaign-card:hover {
+    transform: translateY(-8px);
+}
+
+.campaign-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.campaign-content {
+    padding: 25px;
+}
+
+.campaign-content h3 {
+    color: #166534;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.campaign-content p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Fundraising Information */
+
+.fundraising-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+/* Progress Bar */
+
+.progress-bar {
+    background-color: #e5e7eb;
+    height: 15px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress-fill {
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #16a34a, #4ade80);
+    border-radius: 20px;
+    transition: width 1.5s ease-in-out;
+}
+
+.progress-text {
+    font-weight: bold;
+    color: #166534 !important;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+    .campaign-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .campaign-container {
+        grid-template-columns: 1fr;
+    }
+
+    .campaign-heading h2 {
+        font-size: 28px;
+    }
+
+    .campaign-section {
+        padding: 40px 20px;
+    }
+}
+/* Donation Page */
+
+.donation-heading {
+    background: linear-gradient(135deg, #166534, #22c55e);
+    color: white;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.donation-heading h2 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.donation-section {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.donation-container {
+    width: 100%;
+    max-width: 550px;
+    padding: 35px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.donation-container h2,
+.donation-container > p {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.donation-container h2 {
+    color: #166534;
+}
+
+#donationForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#donationForm label {
+    font-weight: bold;
+}
+
+#donationForm input,
+#donationForm select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+#donationForm button {
+    margin-top: 15px;
+}
+
+#donationMessage {
+    color: #166534;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .donation-container {
+        padding: 25px 20px;
+    }
+
+    .donation-heading h2 {
+        font-size: 27px;
+    }
+}
+/* Volunteer Registration Page */
+
+.volunteer-heading {
+    background: linear-gradient(135deg, #166534, #22c55e);
+    color: white;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.volunteer-heading h2 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.volunteer-section {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.volunteer-container {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.volunteer-container h2 {
+    color: #166534;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#volunteerForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#volunteerForm label {
+    font-weight: bold;
+}
+
+#volunteerForm input,
+#volunteerForm textarea,
+#volunteerForm select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+#volunteerForm button {
+    margin-top: 15px;
+}
+
+#volunteerMessage {
+    text-align: center;
+    color: #166534;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .volunteer-container {
+        padding: 25px 20px;
+    }
+
+    .volunteer-heading h2 {
+        font-size: 27px;
+    }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Registration | HopeHands</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">❤️ HopeHands</h1>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="campaigns.html">Campaigns</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="volunteer-heading">
+        <h2>Become a Volunteer</h2>
+        <p>Share your time and skills to make a difference.</p>
+    </section>
+
+    <section class="volunteer-section">
+
+        <div class="volunteer-container">
+
+            <h2>Volunteer Registration Form</h2>
+
+            <form id="volunteerForm">
+
+                <label for="volunteerName">Full Name</label>
+                <input type="text" id="volunteerName"
+                       placeholder="Enter your full name"
+                       minlength="3" required>
+
+                <label for="volunteerEmail">Email Address</label>
+                <input type="email" id="volunteerEmail"
+                       placeholder="Enter your email"
+                       required>
+
+                <label for="volunteerPhone">Phone Number</label>
+                <input type="tel" id="volunteerPhone"
+                       placeholder="Enter 10-digit phone number"
+                       pattern="[0-9]{10}" required>
+
+                <label for="volunteerAge">Age</label>
+                <input type="number" id="volunteerAge"
+                       min="18" max="100"
+                       placeholder="Enter your age" required>
+
+                <label for="volunteerSkills">Your Skills</label>
+                <textarea id="volunteerSkills"
+                          placeholder="Example: Teaching, Communication, Designing"
+                          rows="4" required></textarea>
+
+                <label for="availability">Availability</label>
+                <select id="availability" required>
+                    <option value="">Select Availability</option>
+                    <option value="Weekdays">Weekdays</option>
+                    <option value="Weekends">Weekends</option>
+                    <option value="Both">Both</option>
+                </select>
+
+                <button type="submit" class="btn">
+                    Register as Volunteer
+                </button>
+
+            </form>
+
+            <p id="volunteerMessage" role="status"></p>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2026 HopeHands. All Rights Reserved.</p>
+        <p>Created for Zelvora Week 3 Web Development Project.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

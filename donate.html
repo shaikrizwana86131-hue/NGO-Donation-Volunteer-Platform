@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Now | HopeHands</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">❤️ HopeHands</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="campaigns.html">Campaigns</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="donation-heading">
+        <h2>Make a Difference Today</h2>
+        <p>Your kindness can bring hope to someone.</p>
+    </section>
+
+    <section class="donation-section">
+        <div class="donation-container">
+
+            <h2>Donation Form</h2>
+            <p>Choose a campaign and donation amount.</p>
+
+            <form id="donationForm">
+
+                <label for="donorName">Full Name</label>
+                <input type="text" id="donorName"
+                       placeholder="Enter your name"
+                       minlength="3" required>
+
+                <label for="donorEmail">Email Address</label>
+                <input type="email" id="donorEmail"
+                       placeholder="Enter your email"
+                       required>
+
+                <label for="campaignSelect">Select Campaign</label>
+                <select id="campaignSelect" required>
+                    <option value="">Choose a campaign</option>
+                    <option value="education">Education for Every Child</option>
+                    <option value="families">Support Families in Need</option>
+                    <option value="environment">Protect Our Environment</option>
+                </select>
+
+                <label for="donationAmount">Select Donation Amount</label>
+                <select id="donationAmount" required>
+                    <option value="">Choose amount</option>
+                    <option value="500">₹500</option>
+                    <option value="1000">₹1,000</option>
+                    <option value="2000">₹2,000</option>
+                    <option value="5000">₹5,000</option>
+                    <option value="custom">Custom Amount</option>
+                </select>
+
+                <div id="customAmountBox" hidden>
+                    <label for="customAmount">Enter Custom Amount (₹)</label>
+                    <input type="number" id="customAmount"
+                           min="1" step="1"
+                           placeholder="Enter amount">
+                </div>
+
+                <button type="submit" class="btn">
+                    Donate Now
+                </button>
+
+            </form>
+
+            <p id="donationMessage" role="status"></p>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 HopeHands. All Rights Reserved.</p>
+        <p>Created for Zelvora Week 3 Web Development Project.</p>
+    </footer>
+
+    <script src="donation.js"></script>
+
+</body>
+</html>
